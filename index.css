@@ -1,0 +1,129 @@
+body {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+div{
+    max-width: 100%; /* 화면의 가로 너비를 최대로 사용 */
+    max-height: 100%; /* 화면의 세로 높이를 최대로 사용 */
+}
+img{
+    max-width: 100%; /* 이미지의 가로 너비를 최대로 */
+    max-height: 100%; /* 이미지의 세로 높이를 최대로 */
+    width: auto; /* 가로 크기 자동 조절 */
+    height: auto; /* 세로 크기 자동 조절 */
+}
+.logo-field {
+    position: absolute; /* 로고를 절대 위치로 설정 */
+    top: 0; /* 부모 요소(body)의 맨 위에 위치 */
+    left: 0; /* 부모 요소(body)의 맨 왼쪽에 위치 */
+    right: 0; /* 부모 요소(body)의 맨 오른쪽에 위치 */
+    margin: 0 auto; /* 수평 가운데 정렬 */
+    max-width: 80%; /* 부모 요소의 너비의 최대 80%로 제한 */
+    z-index: 1; /* 다른 요소들 위에 로고가 보이도록 z-index 설정 */
+}
+.jeju-map {
+    display: block; /* 지도를 블록 요소로 설정하여 자식 요소들이 올바르게 배치되도록 함 */
+    position: relative; /* 자식 요소인 red-pin을 지도 위에 위치시키기 위해 부모 요소에 상대적 위치 설정 */
+    max-width: 100%; /* 화면의 가로 너비를 최대로 사용 */
+    max-height: 100%; /* 화면의 세로 높이를 최대로 사용 */
+}
+
+
+.pin1,
+.pin2,
+.pin3,
+.pin4,
+.pin5,
+.pin6 {
+    position: absolute; /* red-pin을 절대 위치로 설정하여 지도 위에 위치시킴 */
+    top: 50%; /* 지도의 상단에서 절반 떨어진 위치 */
+    left: 50%; /* 지도의 왼쪽에서 절반 떨어진 위치 */
+    transform: translate(-50%, -50%); /* red-pin을 정확히 지도의 중심으로 이동 */
+    max-width: 50px; /* 최대 너비를 50px로 제한 */
+    width: auto; /* 가로 크기를 자동으로 조절 */
+    height: auto; /* 세로 크기를 자동으로 조절 */
+}
+
+.pin1 { /*금오름*/
+    top : 50%;
+    left : 20%;
+}
+.pin2 { /*새별오름*/
+    top : 40%;
+    left : 30%;
+
+}
+.pin3 {/*군산오름*/
+    top : 70%;
+    left : 25%;
+}
+.pin4 {/*거문오름*/
+    top: 24%;
+    left : 65%;
+}
+.pin5 {/*지미오름*/
+    top: 16%;
+    left : 90%;
+}
+.pin6 {/*영주산*/
+    top: 45%;
+    left : 79%;
+}
+
+.popup {
+    position: fixed;
+    top: calc(50% - 10000px); /* 버블을 조금 위로 올림 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* 핀이 표시되는 지도 위에 나타나도록 설정 */
+    display: none; /* 초기에는 숨김 상태 */
+    width: 400px; /* 버블 너비 설정 */
+    overflow: hidden; /* 내용이 넘칠 경우를 대비하여 오버플로우 제어 */
+}
+
+.popup-content {
+    overflow: hidden; /* 내용이 넘칠 경우를 대비하여 오버플로우 제어 */
+}
+
+.popup img {
+    margin-top: 10px;
+    width: 100%; /* 이미지의 너비를 100%로 설정하여 부모 요소에 꽉 차게 표시 */
+    display: block; /* 이미지를 블록 요소로 설정하여 세로 중앙 정렬 */
+}
+.popup .close-btn {
+    position: absolute;
+    top: -5px;
+    right: 10px; /* Adjust the right distance according to your preference */
+    font-size: 40px;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .pin1,
+    .pin2,
+    .pin3,
+    .pin4,
+    .pin5,
+    .pin6 {
+        max-width: 40px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .pin1,
+    .pin2,
+    .pin3,
+    .pin4,
+    .pin5,
+    .pin6 {
+        max-width: 30px;
+    }
+}

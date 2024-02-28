@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oreum</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="detail.css">
+</head>
+
+<body>
+    <div class="all-content">
+        <header class="main-column header">
+            <h1 class="logo"></h1>
+            <br>
+            <div class="info-wrapper">
+                <div class="tagline"><!--이것도 필요하면 db로 --></div>
+            </div>
+        </header>
+
+        <div class="back-button-wrapper">
+            <a href="#" class="back-button">×</a>
+        </div>
+
+        <div class="main-column content">
+            <div class="article">
+                <div class="article-text-wrapper">
+                    <h2 class="thumbnail-title"><strong>정보</strong></h2>
+                    <div class="Infomation-contents"><!--장소 소개 들어갈 공간--> </div>
+                </div>
+
+                <section class="article-text-wrapper">
+                    <h2 class="thumbnail-title"><strong>편의시설</strong></h2>
+                    <div class="amenity">
+                        <div class="parking_icon">
+                            <img src="./imgs/parking.png" title='주차장' alt="주차장">
+                        </div>
+                        <div class="toilet_icon">
+                            <img src="./imgs/tolilet.png" title='화장실' alt="화장실">
+                        </div>
+                        <div class="store_icon">
+                            <img src="./imgs/shop.png" title='매점이 있어요.' alt="매점">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-text-wrapper">
+                    <h2 class="thumbnail-title"><strong>특이 사항</strong></h2>
+                    <div class="option_info">
+                        <div class="expense_icon">
+                            <img src="./imgs/money.png" title='입장료' alt="입장료">
+                        </div>
+                        <div class="pet_icon">
+                            <img src="./imgs/pet.png" title='반려동물 동반여부' alt="반려동물">
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="detail-image">
+                <div class="image-container">
+                    <a href="#" class="image-button" id="panorama-link">
+                        <img src="https://cdn.san.chosun.com/news/photo/202303/22534_82885_3419.jpg" alt="사진1">
+                        <span>파노라마</span>
+                    </a>
+                </div>
+                <div class="image-container">
+                    <a href="https://www.kma.go.kr/jeju/html/oneclick/one_click_olle.jsp" class="image-button">
+                        <img src="https://th.bing.com/th/id/OIP.4yicnTyIvrKs9iK9ji-KBwHaD4?rs=1&pid=ImgDetMain"
+                            alt="사진2">
+                        <span>기온</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Firebase SDK 로드 -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="firebase.js"></script>
+    <script src="detail.js"></script>
+</body>
+
+</html>

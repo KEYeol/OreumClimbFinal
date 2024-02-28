@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!--css초기화하는 normalize 스타일시트, gpt강의에 나왔던 reset.css랑 같다고 보면됨-->
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="logo-field">
+        <img src="imgs/logo.png">
+    </div>
+    <div class="jeju-map">
+        <img src="imgs/map.png" class="map-img">
+        <!--오름 목록 : 1.금오름 2.새별오름 3.군산오름 4.거문오름 5.지미오름 6.영주산-->
+        <!--파일 이미지 이름은 편의상 place01 place02... 식으로 목록 순서대로 사용할것-->
+        <img src="imgs/pin.png" class="pin1" alt="오름핀">
+
+        <img src="imgs/pin.png" class="pin2">
+
+        <img src="imgs/pin.png" class="pin3">
+
+        <img src="imgs/pin.png" class="pin4">
+
+        <img src="imgs/pin.png" class="pin5">
+
+        <img src="imgs/pin.png" class="pin6">
+
+
+    </div>
+    <div class="popup" id="popup">
+        <span class="close-btn">&times;</span>
+        <div class="popup-image"><!--사진이 출력될 자리--></div>
+        <h1 class="popup-content"><!--이름이 출력될 자리--></h1>
+    </div>
+
+
+    <!-- Firebase SDK 로드 -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src = "firebase.js"></script>
+    <script src = "index.js"></script>
+</body>
+
+</html>
